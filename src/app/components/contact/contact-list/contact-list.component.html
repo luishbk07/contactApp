@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Teléfonos</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let contact of contactList; let i = index">
+        <th scope="row">{{ i }}</th>
+        <td>{{ contact.id }}</td>
+        <td>{{ contact.name | uppercase }}</td>
+        <td>{{ contact.lastName | uppercase }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let phone of contact.phones">{{ phone.phoneNumber }}</li>
+          </ul>
+        </td>
+        <td><button class="btn btn-warning"><i class="fa fa-pencil" (click)="onEditContact(i);"></i></button></td>
+        <td><button class="btn btn-info"><i class="fa fa-backward" (click)="onRestoreContact(i)"></i></button></td>
+      </tr>
+      
+    </tbody>
+  </table>
