@@ -14,30 +14,30 @@ export class ContactServiceService {
       lastName: 'Henriquez',
       phones: [
         {
-          phoneNumber: '(809) 758-2190'
+          phoneNumber: '(809) 999-9999'
         }
       ]
     },
     {
       id: 456,
-      name: 'Luis2',
-      lastName: 'Henriquez2',
+      name: 'Pedro',
+      lastName: 'Perez',
       phones: [
         {
-          phoneNumber: '(829) 758-2190'
+          phoneNumber: '(829) 111-1111'
         }
       ]
     },
     {
       id: 789,
-      name: 'Luis',
-      lastName: 'Henriquez',
+      name: 'Marta',
+      lastName: 'Ramos',
       phones: [
         {
-          phoneNumber: '(849) 758-2190'
+          phoneNumber: '(849) 222-2222'
         },
         {
-          phoneNumber: '(809) 999-9999'
+          phoneNumber: '(809) 333-3333'
         }
       ]
     }

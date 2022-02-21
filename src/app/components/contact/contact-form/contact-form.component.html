@@ -9,9 +9,9 @@
     <div class="mb-3" formGroupName="phones">
       <div *ngFor="let phone of _phones.controls; let i=index">
         <div [formGroupName]="i">
-          <input type="text" id="phoneNumber" formControlName="phoneNumber" placeholder="Teléfono">
-          <button class="btn btn-danger m-2" (click)="onRemovePhone(i)"><i class="fa fa-trash"></i></button>
-          <button class="btn btn-success m-2" type="button" (click)="onAddPhone(i);"><i class="fa fa-plus"></i></button>
+          <input type="text" mask="(000) 000-0000" id="phoneNumber" formControlName="phoneNumber" placeholder="Teléfono">
+          <button *ngIf="i > 0" class="btn btn-danger m-2 action-btn" (click)="onRemovePhone(i)"><i class="fa fa-trash"></i></button>
+          <button class="btn btn-success m-2 action-btn" type="button" (click)="onAddPhone(i);"><i class="fa fa-plus"></i></button>
         </div>
       </div>
     </div>        
